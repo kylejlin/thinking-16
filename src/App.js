@@ -1,21 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import Graph from './Graph'
+import data from './data'
+import parseData from './parseData'
+import hypotheticalSplits from './hypotheticalSplits'
+
+const existingSplits = parseData(data, true)
 
 class App extends Component {
+  state = {
+    data: existingSplits.concat(hypotheticalSplits).concat([[300, 0, 0, 0]]),
+    barWidth: 0.1
+  }
+
   render() {
+    document.body.style.setProperty('--bar-width', this.state.barWidth + 'vw')
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="App-header">1600 Splits</div>
+
+        <Graph data={this.state.data} barWidth={this.state.barWidth} />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

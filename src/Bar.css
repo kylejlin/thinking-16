@@ -1,0 +1,22 @@
+.Bar {
+  position: absolute;
+  bottom: 0;
+
+  width: var(--bar-width);
+
+  background-color: purple;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.Bar-part {
+  position: absolute;
+
+  width: var(--bar-width);
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
