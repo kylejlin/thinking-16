@@ -23,13 +23,14 @@ const sum = (array) => {
   return array.reduce((sum, addend) => sum + addend, 0)
 }
 
-export default ({ index, splits, barWidth, mult }) => (
+export default ({ index, splits, barWidth, mult, updateSelectedGroup }) => (
   <div className="Bar" style={computeBarStyle(index, splits, barWidth, mult)}>
     {splits.map((time, i, times) => (
       <div
         className="Bar-part"
         key={i}
         style={computeBarPartStyle(time, i, times, mult)}
+        onMouseOver={() => updateSelectedGroup(index)}
       >
         {numToStr(time)}
       </div>

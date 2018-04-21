@@ -14,5 +14,7 @@
   bottom: 0;
 
   background-color: var(--overlay-color);
-  color: var(--white)
+  color: var(--white);
+
+  pointer-events: none;
 }

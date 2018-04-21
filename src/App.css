@@ -18,3 +18,7 @@
   background-color: var(--black);
   color: var(--white);
 }
+
+.App-display {
+  color: var(--white);
+}

@@ -3,7 +3,7 @@ import './Graph.css'
 import Bar from './Bar'
 import { numToStr } from './timeUtils'
 
-export default ({ data, barWidth, mult, goalTime }) => (
+export default ({ data, barWidth, mult, goalTime, updateSelectedGroup }) => (
   <div className="Graph">
     {data.map((splits, i) => {
       return (
@@ -13,6 +13,7 @@ export default ({ data, barWidth, mult, goalTime }) => (
           splits={splits}
           barWidth={barWidth}
           mult={mult}
+          updateSelectedGroup={updateSelectedGroup}
         />
       )
     })}
