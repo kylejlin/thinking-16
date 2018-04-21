@@ -20,7 +20,12 @@ class App extends Component {
       <div className="App">
         <div className="App-header">1600 Splits</div>
 
-        <Graph data={this.state.data} barWidth={this.state.barWidth} mult={this.state.mult} />
+        <Graph
+          data={this.state.data}
+          barWidth={this.state.barWidth}
+          mult={this.state.mult}
+          goalTime={300}
+        />
       </div>
     )
   }

@@ -8,3 +8,11 @@
 
   overflow: auto;
 }
+
+.Graph-overlay {
+  position: absolute;
+  bottom: 0;
+
+  background-color: var(--overlay-color);
+  color: var(--white)
+}
