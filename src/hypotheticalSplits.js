@@ -21,8 +21,6 @@ for (let i = 0; i < 4; i++) {
   })
 }
 
-console.log(lapMetadata)
-
 for (let a = 0; a < lapMetadata[0].spread; a++) {
   for (let b = 0; b < lapMetadata[1].spread; b++) {
     for (let c = 0; c < lapMetadata[2].spread; c++) {
@@ -37,5 +35,13 @@ for (let a = 0; a < lapMetadata[0].spread; a++) {
     }
   }
 }
+
+const sum = (array) => {
+  return array.reduce((sum, addend) => sum + addend, 0)
+}
+
+hypotheticalSplits.sort((a, b) => {
+  return sum(a) - sum(b)
+})
 
 export default hypotheticalSplits
