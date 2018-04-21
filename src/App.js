@@ -10,7 +10,8 @@ const existingSplits = parseData(data, true)
 class App extends Component {
   state = {
     data: existingSplits.concat(hypotheticalSplits).concat([[300, 0, 0, 0]]),
-    barWidth: 0.1
+    barWidth: 0.1,
+    mult: 0.2
   }
 
   render() {
@@ -19,7 +20,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">1600 Splits</div>
 
-        <Graph data={this.state.data} barWidth={this.state.barWidth} />
+        <Graph data={this.state.data} barWidth={this.state.barWidth} mult={this.state.mult} />
       </div>
     )
   }

@@ -2,7 +2,7 @@ import React from 'react'
 import './Graph.css'
 import Bar from './Bar'
 
-export default ({ data, barWidth }) => (
+export default ({ data, barWidth, mult }) => (
   <div className="Graph">
     {data.map((splits, i) => {
       return (
@@ -11,6 +11,7 @@ export default ({ data, barWidth }) => (
           index={i}
           splits={splits}
           barWidth={barWidth}
+          mult={mult}
         />
       )
     })}
