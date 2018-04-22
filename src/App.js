@@ -8,6 +8,10 @@ import { numToStr } from './timeUtils'
 
 const existingSplits = parseData(data, true)
 
+const sum = (array) => {
+  return array.reduce((sum, addend) => sum + addend, 0)
+}
+
 class App extends Component {
   state = {
     data: existingSplits.concat(hypotheticalSplits).concat([[300, 0, 0, 0]]),
@@ -31,7 +35,7 @@ class App extends Component {
         />
 
         <div className="App-display">
-          {this.state.data[this.state.selectedGroup].map(numToStr).join(', ')}
+          {this.state.data[this.state.selectedGroup].map(numToStr).join(', ') + ' = ' + numToStr(sum(this.state.data[this.state.selectedGroup]))}
         </div>
       </div>
     )
