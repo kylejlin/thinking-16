@@ -1,3 +1,10 @@
+## Do not look at this repository
+I would make this repository private, but I am using a free account.
+
+If you want to look, I can't stop you, but you won't have any idea what this is. You're not supposed to.
+
+## creact-react-app Default README Message
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
